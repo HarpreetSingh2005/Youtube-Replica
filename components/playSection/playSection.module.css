@@ -1,0 +1,88 @@
+.main {
+  /* width: 75vw;; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  box-sizing: border-box;
+  flex: 1;
+  border: 1px solid red;
+}
+.play {
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  border: 1px solid red;
+
+  align-items: center;
+}
+.title {
+  padding: 10px 0 10px 10px;
+  border: 1px solid red;
+
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.description {
+  padding: 10px 10px 10px 10px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+  font-size: 20px;
+  color: #fff;
+}
+
+.description button {
+  border-radius: 15px;
+}
+
+.left {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+}
+
+.right {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+}
+
+.nonVideo {
+  background-color: #212121;
+  /* width: 100%; */
+  padding: 10px;
+  /* height: 100%; */
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* font-size: 30px; */
+  color: #fff;
+  border-radius: 15px;
+}
+
+.clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.moreBtn button {
+  background: black;
+  padding: 0 10px;
+  border: none;
+  /* color: #3ea6ff; */
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+}

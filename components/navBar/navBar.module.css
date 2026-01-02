@@ -1,0 +1,134 @@
+.nav{
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    padding-left: 15px;
+    background-color: #121212;
+    z-index: 20;
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+.left{
+    width: 169px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    /* border: 1px solid red; */
+    
+}
+
+.left .menu{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+.left .logo{
+    width: 123px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-family: "Roboto";
+    text-decoration: none;
+    color: inherit;
+}
+
+.middle{
+    flex: 1;
+    /* border: 1px solid green; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-left: 100px;
+}
+
+.middle input{
+    width: 100%;
+    max-width: 530px;
+    flex-shrink: 1;
+    height: 40px;
+    padding-left: 15px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border: none;
+    background-color: #121212;
+    border: 1px solid #303030;
+    font-size: 15px;
+}
+
+.middle button{
+    height: 43px;
+    width: 60px;
+    border: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 1px solid #303030;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 18px;
+    background-color: #303030;
+}
+
+.middle .mike button{
+    margin-left: 15px;
+    border: 1px solid #303030;
+    height: 44px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;    
+    font-size: 18px;
+}
+
+.right{
+    height: 100%;
+    width: 250px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+}
+
+.right .create {
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+        background-color: #303030;
+
+}
+
+.right .notification{
+    border: none;
+    border: 1px solid#303030;
+    background-color: #121212;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
