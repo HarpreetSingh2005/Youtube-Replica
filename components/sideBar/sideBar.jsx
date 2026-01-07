@@ -5,16 +5,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
+import Link from "next/link";
 
 const sideBar = ({ open }) => {
   return (
     <aside className={styles.sidePanel + " " + (open ? styles.open : "")}>
       {open ? (
         <>
-          <button className={styles.home}>
-            <FontAwesomeIcon icon={faHouse} />
-            <span>Home</span>
-          </button>
+          <Link href="/">
+            <button className={styles.home}>
+              <FontAwesomeIcon icon={faHouse} />
+              <span>Home</span>
+            </button>
+          </Link>
           <button className={styles.shorts}>
             <Image
               src="/images/shorts_icon.png"

@@ -1,37 +1,47 @@
-.content{
-    margin-top: 57.5px;
-    /* width: 100%; */
-    background-color: #121212;
-    display: grid;
-    grid-template-columns: repeat(
-        auto-fill,
-        minmax(350px, 1fr)
-    );
+.content {
+  background-color: #121212;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
 
-    gap: 50px;
+  gap: 50px;
 
-    padding: 30px;
+  padding: 10px 30px;
 }
 .videoCard {
-    height: 380px;
-  background: #181818;
   border-radius: 12px;
-  display:flex;
+  background-color: #212121;
+
+  display: flex;
   flex-direction: column;
-  align-items:center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   text-decoration: none;
 
   color: inherit;
-  /* overflow: hidden; */
+  aspect-ratio: 16/10;
 }
 
-.videoCard :hover{
+.videoCard :hover {
   text-decoration: none;
   color: inherit;
 }
 
-.videoCard image {
-  width: 230px;
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.thumbnail .image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+.title {
+  padding: 10px 10px 10px 10px;
+
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
 }

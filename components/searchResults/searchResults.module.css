@@ -1,0 +1,52 @@
+.show {
+  padding: 10px 5px 10px 5px;
+  margin: 0;
+}
+.content {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+}
+
+.videoCard {
+  display: flex;
+  /* align-items: center; */
+  justify-content: flex-start;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.video {
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  display: flex;
+  background-color: #212121;
+  align-items: center;
+  justify-content: center;
+  height: 244px;
+  width: 460px;
+  /* object-fit: ; */
+}
+
+.video .image {
+  object-fit: cover;
+}
+
+.title {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+  flex-direction: column;
+  width: 62%;
+  font-size: 15px;
+  color: rgb(255, 255, 255, 0.7);
+}
+.title p {
+  padding: 0;
+  margin: 0;
+}
+.heading {
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}

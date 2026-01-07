@@ -12,7 +12,6 @@
   -moz-osx-font-smoothing: grayscale;
 
   --sidebar-width: 240px;
-
 }
 @media (max-width: 840px) {
   :root {
@@ -76,32 +75,51 @@ button:focus-visible {
   }
 }
 
-.MainSection{
+.MainSection {
   padding-top: 70px;
   display: flex;
   flex-direction: row;
 }
-.HeroSection{
+.HeroSection {
   margin-left: 78px;
   flex: 1;
+  overflow-x: hidden;
 }
-.overlay{
-    position: fixed;
+.overlay {
+  position: fixed;
   top: 56px;
-  left: 0;                 /* below navbar */
+  left: 0; /* below navbar */
   /* left: var(--sidebar-width); */
-  right: 0; 
+  right: 0;
   bottom: 0;
 
   background: rgba(0, 0, 0, 0.35); /* fade strength */
   z-index: 1;
-
 }
 
-.content{
+.content {
+  padding: 0 10px 0 10px;
   display: flex;
+  gap: 15px;
   /* align-items: center; */
   /* justify-content: center; */
-  gap: 16px;
   width: 100%;
-  height: 100%;}
+  height: 100%;
+}
+
+.categoryWrapper {
+  position: sticky;
+  padding: 5px 0 0 0;
+  z-index: 1;
+  overflow: visible;
+  background: #121212;
+}
+
+.videoSection {
+  width: 100%;
+}
+
+.searchResults {
+  margin-left: 72px;
+  padding: 0 10px 0 10px;
+}

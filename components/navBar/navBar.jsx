@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -12,7 +13,12 @@ import {
 import styles from "./navBar.module.css";
 import Image from "next/image";
 const navBar = ({ onMenuClick }) => {
-  useState();
+  const [query, setQuery] = useState("");
+  const router = useRouter();
+  const handleSearch = () => {
+    if (!query.trim()) return;
+    router.push(`/results?search_query=${encodeURIComponent(query)}`);
+  };
 
   return (
     <nav className={styles.nav}>
@@ -31,8 +37,14 @@ const navBar = ({ onMenuClick }) => {
         </Link>
       </div>
       <div className={styles.middle}>
-        <input type="text" placeholder="Search" />
-        <button>
+        <input
+          type="text"
+          placeholder="Search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={(e) => e.key == "Enter" && handleSearch()}
+        />
+        <button onClick={handleSearch}>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </button>
         <div className={styles.mike}>
