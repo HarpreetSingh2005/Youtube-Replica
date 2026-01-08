@@ -25,7 +25,6 @@ const searchResults = ({ search_query, videos }) => {
                 alt="Video"
                 width={500}
                 height={244}
-                // style={{ width: "auto", height: "100%", objectFit: "cover" }}
               />
             </div>
             <div className={styles.title}>

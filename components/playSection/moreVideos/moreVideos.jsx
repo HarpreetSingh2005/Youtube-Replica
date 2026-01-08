@@ -8,13 +8,13 @@ import { fetchRelatedVideos } from "@/app/services/youtubeRelatedSearch";
 const moreVideos = ({ channel }) => {
   const [videosDetails, setVideosDetails] = useState([]);
   useEffect(() => {
-    console.log("id is", channel);
-    fetchRelatedVideos(channel).then(setVideosDetails);
+    if (videosDetails.length === 0) {
+      fetchRelatedVideos(channel).then(setVideosDetails);
+    }
   }, [channel]);
   if (!channel) {
     return <div className={styles.main}>Loading...</div>;
   }
-  console.log(videosDetails);
 
   return (
     <div className={styles.main}>

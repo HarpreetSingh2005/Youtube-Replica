@@ -9,9 +9,6 @@ export default function AppShell({ children }) {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const pathname = usePathname();
   const isVideo = pathname.includes("/watch/");
-  //   useEffect(() => {
-  //     setSidebarOpen(false);
-  //   }, [pathname]);
 
   return (
     <>

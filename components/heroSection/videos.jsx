@@ -8,8 +8,10 @@ import { fetchVideos } from "@/app/services/youtubeSearch";
 const videos = (videos) => {
   const [videosDetails, setVideosDetails] = useState([]);
   useEffect(() => {
-    fetchVideos("music videos punjabi or english").then(setVideosDetails);
-  }, []);
+    if (videosDetails.length === 0) {
+      fetchVideos("music videos punjabi or english").then(setVideosDetails);
+    }
+  }, [videosDetails.length]);
   if (!videosDetails) {
     return <div>Loading...</div>;
   }

@@ -20,20 +20,22 @@ const PlaySection = ({ videoId, onVideoLoaded }) => {
 
   useEffect(() => {
     if (!videoId) return;
+    let isMounted = true;
     fetchVideo(videoId).then((video) => {
-      setVideo(video);
-      onVideoLoaded(video.snippet.title);
-      console.log("Related Video name: ", video);
+      if (isMounted && video) {
+        setVideo(video);
+        onVideoLoaded(video.snippet.title);
+      }
     });
+    return () => {
+      isMounted = false;
+    };
   }, [videoId]);
   if (!video || !video.snippet || !video.statistics) {
     return <div className={styles.main}>Loading...</div>;
   }
 
   const MAX_LENGTH = 120;
-
-  // const isLong = text.length > MAX_LENGTH;
-  // const displayText = showMore ? text : text.slice(0, MAX_LENGTH);
 
   return (
     <div className={styles.main}>
@@ -73,7 +75,7 @@ const PlaySection = ({ videoId, onVideoLoaded }) => {
           </button>
         </div>
       </div>
-      <div className={styles.nonVideo + " " + (!showMore ? styles.clamp : "")}>
+      <div className={styles.nonVideo}>
         <p>Description: {video.snippet.description}</p>
       </div>
     </div>

@@ -65,13 +65,10 @@
 
 .nonVideo {
   background-color: #212121;
-  /* width: 100%; */
   padding: 10px;
   /* height: 100%; */
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* font-size: 30px; */
+
   color: #fff;
   border-radius: 15px;
 }
@@ -87,7 +84,7 @@
   background: black;
   padding: 0 10px;
   border: none;
-  /* color: #3ea6ff; */
+
   cursor: pointer;
   padding: 0;
   font-size: 14px;

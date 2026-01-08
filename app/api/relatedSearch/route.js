@@ -10,11 +10,8 @@ export async function GET(request) {
         q
       )}&type=video&maxResults=10&key=${process.env.API}`
     );
-    console.log("Id is :", q);
 
     const data = await ytRes.json();
-    console.log("Data using related search:", data);
-    console.log(data.items);
     return NextResponse.json({ items: data.items });
   } catch (error) {
     return NextResponse.json(
