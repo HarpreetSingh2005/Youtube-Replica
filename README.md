@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# YouTube Replica 
 
-## Getting Started
+A full-stack YouTube clone built to understand the complexities of modern web development, component architecture, and database management. This was my first major self-made project.
 
-First, run the development server:
+## Overview
+The goal of this project was to recreate the core experience of YouTube, focusing on a responsive UI, video data integration, and user authentication. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+- **Authentication:** Custom login/signup system using **Neon** (Postgres) and **Drizzle ORM**.
+- **Session Management:** Used cookies to keep users signed in.
+- **Data Flow:** Implemented data sharing between parent and child components.
+- **Manual Styling:** Most of the CSS was written manually to match the YouTube UI.
+- **Video Integration:** Fetching and displaying data via APIs.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
+- **Framework:** Next.js / React
+- **Database:** Neon
+- **ORM:** Drizzle
+- **Language:** JavaScript / CSS
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Challenges & Current Issues
+- **API Fetching:** This was the most difficult part. I used AI (GPT/Gemini) for about 90% of the logic here. I am still facing an issue where the API sometimes fetches data multiple times or inconsistently, which I am still trying to fully understand.
+- **Component Complexity:** Managing data transfer between multiple nested components was confusing initially, but I managed to implement it to get the site functional.
+- **Database Setup:** Learning to connect Drizzle with Neon and managing schemas for the first time.
