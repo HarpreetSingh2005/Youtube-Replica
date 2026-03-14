@@ -5,6 +5,9 @@ A full-stack YouTube clone built to understand the complexities of modern web de
 ## Overview
 The goal of this project was to recreate the core experience of YouTube, focusing on a responsive UI, video data integration, and user authentication. 
 
+## Demo Video
+https://github.com/user-attachments/assets/29aef329-9083-4577-9284-56b994615153
+
 ## Features
 - **Authentication:** Custom login/signup system using **Neon** (Postgres) and **Drizzle ORM**.
 - **Session Management:** Used cookies to keep users signed in.
